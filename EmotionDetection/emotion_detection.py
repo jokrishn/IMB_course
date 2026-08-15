@@ -36,3 +36,13 @@ def emotion_detector(text_to_analyse):
     emotions["dominant_emotion"] = dominant_emotion
 
     return emotions
+
+if response.status_code == 400:
+    return {
+        "anger": None,
+        "disgust": None,
+        "fear": None,
+        "joy": None,
+        "sadness": None,
+        "dominant_emotion": None
+    }
